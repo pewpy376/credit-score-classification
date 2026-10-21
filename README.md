@@ -38,8 +38,8 @@ To prevent data snooping, all data transformations and imputations are strictly 
 - **Ordinal Variables:** Custom ordinal encodings preserving domain order for `credit_mix` (`Bad` < `Standard` < `Good`), `payment_level`, and `payment_volume`.
 - **Nominal Features:** One-Hot Encoding (`handle_unknown='ignore'`) for occupations and specific loan types.
 - **Feature Engineering:**
-  - `debt_to_income`: $\frac{\text{total\_emi\_per\_month}}{\text{monthly\_inhand\_salary}}$
-  - `saving_ratio`: $\frac{\text{monthly\_balance}}{\text{monthly\_inhand\_salary}}$
+  - `debt_to_income`: `total_emi_per_month` / `monthly_inhand_salary`
+  - `saving_ratio`: `monthly_balance` / `monthly_inhand_salary`
   - Aggregated loan counts by loan category (`auto_loan`, `debt_consolidation_loan`, etc.).
 
 ---
